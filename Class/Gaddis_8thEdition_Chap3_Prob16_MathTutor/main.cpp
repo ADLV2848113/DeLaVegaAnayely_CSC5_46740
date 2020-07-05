@@ -1,18 +1,20 @@
 /*
- * File:   main.cpp
+ * File:   Math Tutor
  * Author: Anayely De La Vega
- * Created on June 27, 2020, 3:55 PM
- * Purpose: Calculating the number of miles per gallon the car gets.
+ * Created on July 4, 2020, 6:57 PM
+ * Purpose: Displays the correct answer for any addition between 1 and 9. 
  */
 
 //System Libraries
 #include <iostream> //I/O Library 
+#include <cstdlib>//for rand
+#include <ctime>
 #include <cmath>
 using namespace std;
 
 //User Libraries
 
-//Global Constants Only
+//Global Constants Only 
 //Well known Science, Mathematical and Laboratory Constants
 
 //Function Prototypes 
@@ -20,23 +22,32 @@ using namespace std;
 //Execution of Code Begins Here
 int main(int argc, char** argv) {
     //Set the random number seed here
+    const int min = 1;
+    const int max = 9; 
     
     //Declare all variables for this function
-    int miles;//350 miles
-    int galls;//16 gallons
-    int total;//the total which is done by dividing
-    
+    int 1;//first number
+        2;//second number 
+    int answ; 
     
     //Initialize all known variables 
-    miles = 350;
-    galls = 16;
-    total = miles / galls;
+    unsigned seed = time(0);
+    srand(seed);
     
     //Process Inputs to Outputs -> Mapping Process
+    cout<<"This program will display two random numbers ";
+    
     //Maps known values to the unknown objectives 
+  1= (rand() % (max - min +1 )) + min;
+  2= (rand() % (max - min + 1)) + min; 
+  answ = 1+2;
+    
     
     //Display the Inputs/Outputs
-    cout<< total << " miles per gallons " <<endl;
+    cout<< 1 << " + " << 2 << " = ? \n "<< endl;
+    cout<< "Press \"Enter\" to see solution";
+    cin.get();<<endl;
+     
     
     //Clean up the code, close files. deallocate memory, etc...
     //Exit stage right 

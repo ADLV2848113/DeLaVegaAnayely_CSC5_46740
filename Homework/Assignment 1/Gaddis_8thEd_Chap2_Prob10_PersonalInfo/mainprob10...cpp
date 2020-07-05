@@ -1,13 +1,13 @@
 /*
  * File:   main.cpp
  * Author: Anayely De La Vega
- * Created on June 27, 2020, 3:55 PM
- * Purpose: Calculating the number of miles per gallon the car gets.
+ * Created on June 27, 2020, 2:21 PM
+ * Purpose: Displaying my Personal Information 
  */
 
 //System Libraries
 #include <iostream> //I/O Library 
-#include <cmath>
+#include<string>
 using namespace std;
 
 //User Libraries
@@ -22,21 +22,21 @@ int main(int argc, char** argv) {
     //Set the random number seed here
     
     //Declare all variables for this function
-    int miles;//350 miles
-    int galls;//16 gallons
-    int total;//the total which is done by dividing
-    
+    string name;//my first and last name
+    string addy;//my address
+    string telnum;//my phone number
+    string collmaj;//my college major
     
     //Initialize all known variables 
-    miles = 350;
-    galls = 16;
-    total = miles / galls;
-    
+    name = "Ana De La Vega";
+    addy = "11965 F. Lane, M. Valley, CA, 92557";
+    telnum = "(951)399-8873";   
+    collmaj = "Environmental Engineering";        
     //Process Inputs to Outputs -> Mapping Process
     //Maps known values to the unknown objectives 
     
     //Display the Inputs/Outputs
-    cout<< total << " miles per gallons " <<endl;
+    cout<< name << endl << addy << endl << telnum << endl << collmaj << endl;
     
     //Clean up the code, close files. deallocate memory, etc...
     //Exit stage right 

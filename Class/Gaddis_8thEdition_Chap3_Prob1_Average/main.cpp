@@ -1,52 +1,108 @@
-/* 
- * File:   Average
- * Author: Anayely De La Vega
- * Created on January 3, 2020, 4:00 PM
- * Purpose:  To calculate the average test score 
- */
+/*
+Programming Challenges, 4.14, chapter4.14.cpp
+Running the Race
+Write a program that asks for the names of three runners and the time it took
+each of them to finish the race.  The program should display who came in first,
+second, and third place.
+Input validation: only accept positive numbers for the times.
+Page 223
+*/
 
-//System Libraries
-#include <iostream>  //Input/Output Library
-#include <iomanip>
+#include<iostream>
+#include<iomanip>
+#include<string>
+
 using namespace std;
 
-//User Libraries
+int main()
+{
+ string runnerOne, runnerTwo, runnerThree;
+ double timeOne, timeTwo, timeThree;
 
-//Global Constants, no Global Variables are allowed
-//Math/Physics/Conversions/Higher Dimensions - i.e. PI, e, etc...
+ cout << "\n+++++++++++++++++++++++++\n"
+  << "     Running the Race"
+  << "\n+++++++++++++++++++++++++\n\n";
 
-//Function Prototypes
+ cout << "Enter the name of first runner: ";
+ getline(cin, runnerOne);
+ cout << "Enter time for first runner: ";
+ cin >> timeOne;
 
-//Execution Begins Here!
-int main(int argc, char** argv) {
-    //Set the random number seed
-    
-    //Declare Variables
-    int a, b, c, d, e;//from all 5 different values 
-    float ave;// the total sum of all 5 values divided by 5
-    int sum;// the addition of the 5 values 
-    
-    //Initialize or input i.e. set variable values
-    // a will be number 1
-    cin>>a;
-    //b will be number 2
-    cin>>b;
-    //c will be bumber 3
-    cin>>c;
-    //d will be number 4
-    cin>>d;
-    //e will be nunber 5
-    cin>>e;
-    sum = a + b + c + d + e;
-    ave = sum / ( 5.0 );
-    
-    //Map inputs -> outputs
-    cout<< "Input 5 numbers to average."<< endl;
-    cout<< "The average = " << setprecision(3)<<ave;
-    
-    //Display the outputs
+ if(timeOne <= 0)
+ cout << "Only positive times are allowed!! \n\n";
+ 
+ cin.ignore();
+ cout << "\nEnter the name of second runner: ";
+ getline(cin, runnerTwo);
+ cout << "Enter time for second runner: ";
+ cin >> timeTwo;
 
-    //Exit stage right or left!
-    return 0;
-}
+ if(timeTwo <= 0)
+ cout << "Only positive times are allowed!! \n\n";
+
+ cin.ignore();
+ cout << "\nEnter the name of third runner: ";
+ getline(cin, runnerThree);
+ cout << "Enter time for third runner: ";
+ cin >> timeThree;
+
+ if(timeThree <= 0)
+ cout << "Only positive times are allowed!! \n\n";
+
+ cout << "\--------------------------\n"
+  << "        Results"
+  << "\n-------------------------\n\n";
+
+ if(timeOne < timeTwo && timeOne < timeThree)
+ {
+ if(timeTwo < timeThree)
+ {
+ cout << "First place: " << runnerOne << endl
+  << "Second Place: " << runnerTwo << endl
+  << "Third Place: " << runnerThree << "\n\n";
+ }
+ if(timeThree < timeTwo)
+ {
+ cout << "First place: " << runnerOne << endl
+  << "Second Place: " << runnerThree << endl
+  << "Third Place: " << runnerTwo << "\n\n";
+ }
+ }
+
+ if(timeTwo < timeOne && timeTwo < timeThree)
+ {
+ if(timeOne < timeThree)
+ {
+ cout << "First place: " << runnerTwo << endl
+  << "Second Place: " << runnerOne << endl
+  << "Third Place: " << runnerThree << "\n\n";
+ }
+ if(timeThree < timeOne)
+ {
+ cout << "First place: " << runnerTwo << endl
+  << "Second Place: " << runnerThree << endl
+  << "Third Place: " << runnerOne << "\n\n";
+ }
+ }
+
+ if(timeThree < timeOne && timeThree < timeTwo)
+ {
+ if(timeOne < timeTwo)
+ {
+ cout << "First place: " << runnerThree << endl
+  << "Second Place: " << runnerOne << endl
+  << "Third Place: " << runnerTwo << "\n\n";
+ }
+ if(timeTwo < timeOne)
+ {
+ cout << "First place: " << runnerThree << endl
+  << "Second Place: " << runnerTwo << endl
+  << "Third Place: " << runnerOne << "\n\n";
+ }
+ }
+
+ system("pause");
+
+ return 0
+  
 

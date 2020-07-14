@@ -8,6 +8,7 @@
 
 //System Libraries
 #include <iostream>  //Input/Output Library
+#include <string>
 using namespace std;
 
 //User Libraries
@@ -22,7 +23,7 @@ int main(int argc, char** argv) {
     //Set the random number seed
     
     //Declare Variables
-    spring f1, s2;//first sign and second sign
+    string first, sec;//first sign and second sign
     cout"Horoscope Program which examines compatible signs."<<endl;
     
     cout<<"Input 2 signs."<<endl;
@@ -35,7 +36,7 @@ int main(int argc, char** argv) {
         if (sec=first){
             cout<<first "and"<<sec<< "are compatible Earth signs.";
         }else if (sec=="Virgo"){
-            cout<<first<<"and"<<sec<<"are comaptible Earth signs.";
+            cout<<first<<"and"<<sec<<"are compatible Earth signs.";
         }else if (sec=="Capricorn"){
             cout<<first<<"and"<<sec<<"are compatible Earth signs.";
         }
@@ -43,7 +44,7 @@ int main(int argc, char** argv) {
     if (sec=first){
             cout<<first "and"<<sec<< "are compatible Earth signs.";
         }else if (sec=="Taurus"){
-            cout<<first<<"and"<<sec<<"are comaptible Earth signs.";
+            cout<<first<<"and"<<sec<<"are compatible Earth signs.";
         }else if (sec=="Capricorn"){
             cout<<first<<"and"<<sec<<"are compatible Earth signs.";
         }

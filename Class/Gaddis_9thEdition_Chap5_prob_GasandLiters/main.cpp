@@ -8,6 +8,7 @@
 
 //System Libraries
 #include <iostream>  //Input/Output Library
+#include <string>
 using namespace std;
 
 //User Libraries
@@ -23,6 +24,7 @@ int main(int argc, char** argv) {
     float miles;//total miles traveled
     float lit;//the total liters used
     float galls;//gallons
+    string options;
     //Declare Variables
     
     //Initialize or input i.e. set variable values
@@ -38,9 +40,8 @@ int main(int argc, char** argv) {
     cin>>galls;
     cout<< galls <<endl;
     cout<<"Again:"<<endl;
-    cout<<"To continue, then enter 'Y' :";
-    cin>> option;
-    {while (options =='y' || options == 'Y');
+    cout<<"To continue option, then enter 'Y' :";
+    {while (option =='y' || option == 'Y')
     
     
     

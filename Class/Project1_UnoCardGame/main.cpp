@@ -44,8 +44,8 @@ int main(int argc, char** argv) {
         dPile;//draw pile where the cards are located 
         cout<<" Ready to play Uno!!"<<endl;
     
-      string::  draw(7, dPile);//player 1 will get 7 cards to start the game
-      string::   draw(7, dPile);//player 2 will get 7 cards to start the game
+     draw(7, dPile);//player 1 will get 7 cards to start the game
+     draw(7, dPile);//player 2 will get 7 cards to start the game
     
     }      
     for (int i=1; i<cards; i++)
@@ -116,7 +116,7 @@ int main(int argc, char** argv) {
     cout<<value<<endl;
 
     //Display the Inputs/Outputs
-    bool== true 
+    bool
     {
         if (color)
             return true;
@@ -130,26 +130,29 @@ int main(int argc, char** argv) {
     if (play1 ==0)
     {
         win=pass;
-    }
+    
     else if (play2 == 0)
-    {   
+      
         win=fail;
-    }
+    
     if win == pass
-    {
-        {
+   
+       
     cout<<"You Win"<<endl
+    {
     else 
         cout<<"You Lose"<<endl;
         
     cout<<"Play Again"<<endl;
-    answer input== ("Yes" or "No"); 
+    {
+    answer input== ("Yes" or "No"); //play again or end the game
     
     if (answer =="yes");
             cout<<"Continue playing";
     else (answer == "No ")
     cout<<"End of Game"endl;
     }
+}
 }
     //Clean up the code, close files. deallocate memory, etc...
     //Exit stage right 

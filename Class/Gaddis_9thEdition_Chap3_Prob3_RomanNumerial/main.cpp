@@ -1,8 +1,8 @@
 /* 
- * File:   main.cpp
+ * File:   
  * Author: Anayely De La Vega
- * Created on July 9, 2020, 3:19 PM
- * Purpose:  Convert to Roman Numerals
+ * Created on July 21, 2020 2:50 PM
+ * Purpose:  To calculate the retail price after adding the original price with the markup percentage
  */
 
 //System Libraries
@@ -10,60 +10,34 @@
 #include <iomanip>
 using namespace std;
 
-//Global Constants only
-//Math, Physics, Conversions, Higher Order Dimension 
+//User Libraries
+
+//Global Constants - No Global Variables
+//Only Universal Constants, Math, Physics, Conversions, Higher Dimensions
 
 //Function Prototypes
 
 //Execution Begins Here
 int main(int argc, char** argv) {
-    //Set random number seed
-    srand(static_cast<unsigned int>(time(0)));
+    //Set Random Number seed
     
-    //Declare all variables
-    unsigned short con;//Convert numbers 
-    string rom;//roman numerals
-    string inte;
-    
+    //Declare Variable Data Types and Constants
+    float calculateRetail;//
+    float wholesal, maPerc;
     //Initialize Variables
-    con=rand()%2001+1000;
-    cout<<"The number to convert = "<<con<<endl;
-    cout<<"The converted Number to Roman Digits"<<endl;
-    cin>>inte;
+    //Enter the percent in decimal form
     
-    //First process the 1000's with a Switch Statement
-    char n1000s=con/1000;
-    switch(n1000s){
-        case 3:rom+="M";
-        case 2:rom+="M";
-        case 1:rom+="M";
-    }
+  calculateRetail=(wholesal +(wholesal * maPerc));
     
-    
-    con-=n1000s*1000;
-    char n100s=con/100;
-    rom+=n100s==9?"CM":
-           n100s==8?"DCCC":
-           n100s==7?"DCC":
-           n100s==6?"DC":
-           n100s==5?"D":
-           n100s==4?"CD":
-           n100s==3?"CCC":
-           n100s==2?"CC":
-           n100s==1?"C":"";
-    
-    //Process the 10's with a dependent if
-    con-=n100s*100;
-    char n10s=con/10;
-    if(n10s==9)rom+="XC";
-
-    
-
+    //Process or map Inputs to Outputs
+    cout<<"Enter the wholesale cost:"<<endl;
+    cin>>wholesal;
+    cout<<"Enter the markup percentage:"<<endl;
+    cin>>maPerc;
     
     //Display Outputs
-    cout<<rom<<endl;
-
-    //Exist Stage Right
+     cout<<"The retail price is $"<<setprecision(2)<<fixed<<calculateRetail;
+    //Exit stage right!
     return 0;
-} 
+}
 

@@ -1,14 +1,13 @@
 /* 
  * File:   
- * Author: Anayely De La Vega
- * Created on July 25, 20 11:40 AM
- * Purpose: Display the different salsas, the total sales, and both the lowest and highest selling products. 
+ * Author: Anayely De La Vega 
+ * Created on July 28, 2020 6:00 PM
+ * Purpose:  Display the winner of the lottery ticket.
  */
 
 //System Libraries
 #include <iostream>
 #include <iomanip>
-#include <string>
 using namespace std;
 
 //User Libraries
@@ -17,40 +16,25 @@ using namespace std;
 //Only Universal Constants, Math, Physics, Conversions, Higher Dimensions
 
 //Function Prototypes
-//This program uses to arrays one for the different types of salsas 
-//the second for the profit
-
+    bool linearSearch(const int a[], int n, int val);
 //Execution Begins Here
 int main(int argc, char** argv) {
     //Set Random Number seed
-    int salsas = 5;
-    string name[salsas]= {"mild", "medium", "sweet", "hot", "zesty"};// the number of salsas
-    float sales[salsas];// sales for each salsa
-    float prof;//the profit for each salsa a total of 5
-    int low, high;//the lowest and highest profit
+    int SIZE = 10;
+    int ticket [SIZE]= {"13579", "26791", "26792","33445", "55555","62483", "77777","79422", "85647", "93121"};
+    int winner;
+    bool results;
     //Declare Variable Data Types and Constants
-     low=0;//lowest sale
-     high=0;//highest sells
-
+    
+    //Initialize Variables
+    
     //Process or map Inputs to Outputs
-    for (int i = 0; i < salsas; i++) {
-        cout<<"Enter the sales of "<<name[i]<<" salsa:$"<<endl;
-        cin>>sales[i];
+    for (int i=0; i<ticket[i];i++){
+    cout<<"Enter the winning number";
+    cin>>winner;
     }
-    cout<< "Type     Sales"<<endl;
-    cout<< name[0]<< "     $"<< sales[0]<<endl;
-    cout<< name[1]<< "   $"<< sales[1]<<endl;
-    cout<< name[2]<< "    $"<< sales[2]<<endl;
-    cout<< name[3]<< "      $"<< sales[3]<<endl;
-    cout<< name[4]<< "    $"<< sales[4]<<endl;
-    
-    prof = ( sales[0] + sales[1] + sales[2] + sales[3] + sales[4]);
-   cout<<"Total Sales was $"<<prof<<endl;
-    
-   cout<<"medium was the lowest selling product."<<endl;
-   cout<<"hot was the highest selling product.";
-    
-    
+    //Display Outputs
+
     //Exit stage right!
     return 0;
 }

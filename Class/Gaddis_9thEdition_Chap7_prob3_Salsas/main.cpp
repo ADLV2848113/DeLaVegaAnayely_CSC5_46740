@@ -1,14 +1,12 @@
 /* 
  * File:   
- * Author: Anayely De La Vega
- * Created on July 25, 20 11:40 AM
- * Purpose: Display the different salsas, the total sales, and both the lowest and highest selling products. 
+ * Author: Anayely De La Vega 
+ * Created on July 27, 2020 9:00PM
+ * Purpose: Display the hours employees worked, identify each employee, and display the wages for each. 
  */
 
 //System Libraries
 #include <iostream>
-#include <iomanip>
-#include <string>
 using namespace std;
 
 //User Libraries
@@ -17,40 +15,33 @@ using namespace std;
 //Only Universal Constants, Math, Physics, Conversions, Higher Dimensions
 
 //Function Prototypes
-//This program uses to arrays one for the different types of salsas 
-//the second for the profit
 
 //Execution Begins Here
 int main(int argc, char** argv) {
     //Set Random Number seed
-    int salsas = 5;
-    string name[salsas]= {"mild", "medium", "sweet", "hot", "zesty"};// the number of salsas
-    float sales[salsas];// sales for each salsa
-    float prof;//the profit for each salsa a total of 5
-    int low, high;//the lowest and highest profit
+    int NUM_EMPLOYEES=7;//Total number of employees
+    int names[NUM_EMPLOYEES] = {"5658845", "4520125", "7895122", "8777541", "8451277", "1302850", "7580489"};
+    int hours[NUM_EMPLOYEES];//The hours worked
+    float payRate[NUM_EMPLOYEES];//Pay Rate 
+    float wages[NUM_EMPLOYEES];//the wages of the employees
     //Declare Variable Data Types and Constants
-     low=0;//lowest sale
-     high=0;//highest sells
-
-    //Process or map Inputs to Outputs
-    for (int i = 0; i < salsas; i++) {
-        cout<<"Enter the sales of "<<name[i]<<" salsa:$"<<endl;
-        cin>>sales[i];
+    
+    //Initialize Variables
+    for (int index=0; index<NUM_EMPLOYEES;index++){
+        cout<<"Enter employee "<<names[index]<<"'s pay rate"<<endl;
+        cin>>hours[index];
+        cout<<"Enter employee "<<names[index]<<"'s hours work:"<<endl;
+        cin>>payRate[index];
     }
-    cout<< "Type     Sales"<<endl;
-    cout<< name[0]<< "     $"<< sales[0]<<endl;
-    cout<< name[1]<< "   $"<< sales[1]<<endl;
-    cout<< name[2]<< "    $"<< sales[2]<<endl;
-    cout<< name[3]<< "      $"<< sales[3]<<endl;
-    cout<< name[4]<< "    $"<< sales[4]<<endl;
     
-    prof = ( sales[0] + sales[1] + sales[2] + sales[3] + sales[4]);
-   cout<<"Total Sales was $"<<prof<<endl;
+       for (int index=0; index<NUM_EMPLOYEES;index++){
+            wages[index] = (hours[index] * payRate[index]);
+           cout<<"Employee "<<names[index]<<"'s gross pay"<<wages[index]<<endl;
+       }
+    //Process or map Inputs to Outputs
     
-   cout<<"medium was the lowest selling product."<<endl;
-   cout<<"hot was the highest selling product.";
-    
-    
+    //Display Outputs
+
     //Exit stage right!
     return 0;
 }

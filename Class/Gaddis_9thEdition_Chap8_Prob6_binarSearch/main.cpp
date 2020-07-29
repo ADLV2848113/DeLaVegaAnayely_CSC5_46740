@@ -1,12 +1,13 @@
 /* 
  * File:   
- * Author: 
- * Created on 
- * Purpose:  
+ * Author: Anayely De La Vega
+ * Created on July 25, 20 11:40 AM
+ * Purpose: Display the different salsas, the total sales, and both the lowest and highest selling products. 
  */
 
 //System Libraries
 #include <iostream>
+#include <iomanip>
 #include <string>
 using namespace std;
 
@@ -16,96 +17,40 @@ using namespace std;
 //Only Universal Constants, Math, Physics, Conversions, Higher Dimensions
 
 //Function Prototypes
+//This program uses to arrays one for the different types of salsas 
+//the second for the profit
 
 //Execution Begins Here
 int main(int argc, char** argv) {
     //Set Random Number seed
-    void selectionSort(string[], int);
-    void swap(string&, string &);
-    void displayArray(string[], int, string);
-    int binarySearch(string[], int, string);
+    int salsas = 5;
+    string name[salsas]= {"mild", "medium", "sweet", "hot", "zesty"};// the number of salsas
+    float sales[salsas];// sales for each salsa
+    float prof;//the profit for each salsa a total of 5
+    int low, high;//the lowest and highest profit
     //Declare Variable Data Types and Constants
-    const int NUM_NAMES=20;
-	string names[NUM_NAMES]={"Collins, Bill", "Smith, Bart", "Allen, Jim",
-							 "Griffin, Jim", "Stamey, Marty", "Rose, Geri",
-							 "Taylor, Terri", "Johnson, Jill",
-							 "Allison, Jeff", "Looney, Joe", "Wolfe, Bill",
-							 "James, Jean", "Weaver, Jim", "Pore, Bob",
-							 "Rutherford, Greg", "Javens, Renee",
-							 "Harrison, Rose", "Setzer, Cathy",
-							 "Pike, Gordon", "Holland, Beth" };
-    //Initialize Variables
-    displayArray(names, NUM_NAMES, "UNSORTED: \n----------------");
-    selectionSort(names, NUM_NAMES);
-    displayArray(names, NUM_NAMES, "SORTED: \n-----------------");
-    
-    string user_name;
-    cout<<"Choose a name:";
-    getline(cin, user_name);
-    
-    int position = binarySearch(names. NUM_NAMES, user_name);
-    
-    if (position !=-1)
-    cout<< name[position]<<"was found."<<endl;
-    else 
-    cout<<user_name<<"was not found."<<endl;
-    //Process or map Inputs to Outputs
-    
-    //Display Outputs
+     low=0;//lowest sale
+     high=0;//highest sells
 
+    //Process or map Inputs to Outputs
+    for (int i = 0; i < salsas; i++) {
+        cout<<"Enter the sales of "<<name[i]<<" salsa:$"<<endl;
+        cin>>sales[i];
+    }
+    cout<< "Type     Sales"<<endl;
+    cout<< name[0]<< "     $"<< sales[0]<<endl;
+    cout<< name[1]<< "   $"<< sales[1]<<endl;
+    cout<< name[2]<< "    $"<< sales[2]<<endl;
+    cout<< name[3]<< "      $"<< sales[3]<<endl;
+    cout<< name[4]<< "    $"<< sales[4]<<endl;
+    
+    prof = ( sales[0] + sales[1] + sales[2] + sales[3] + sales[4]);
+   cout<<"Total Sales was $"<<prof<<endl;
+    
+   cout<<"medium was the lowest selling product."<<endl;
+   cout<<"hot was the highest selling product.";
+    
+    
     //Exit stage right!
     return 0;
-}
-
-void selectionSearch(string array[], int ARRAY_SIZE){
-    int min_index;
-    string min_value;
-    
-    for (int start_index = 0; start_index < (ARRAY_SIZE -1); start_index++)
-    {
-        min_index= start_index;
-        min_value= array[start_index];
-        
-        for(int index = start_index+1; index < ARRAY_SIZE; index++)
-        {
-            if (array[index] < min_value)
-            {
-                   min_value = array[index];
-                   min_index = index; 
-              }
-        }
-        swap(array[min_index], array[start_index]);
-    }
-    
-}
-void swap(string &a, string &b){
-    string temp = a;
-    a = b;
-    b = temp;
-}
-void displayArray(string array[], int ARRAY_SIZE, string prompt){
-    cout<<promt<<endl;
-    for (int i=0; i < ARRAY_SIZE; i++)
-    cout<<array[i]<<endl;
-    cout<<endl;
-}
-int binarySearch(string array[], int array_size, string user_name){
-    int first =0;
-    last = array_size -1//19
-    middle,
-    position=-1;
-    bool found= false;
-    
-    while (!found && first <= last){
-        middle = (first + last)/2;
-        if(array[middle]==user_name){
-            position = middle;
-            found = true;
-    }
-    else if (array[middle] > user_name)
-    last = middle -1;
-    else 
-    first = middle +1;
-}
-return position;
 }

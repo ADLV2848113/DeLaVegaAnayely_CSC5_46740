@@ -25,30 +25,26 @@ int main(int argc, char** argv) {
     //Set Random Number seed
     int salsas = 5;
     string name[salsas]= {"mild", "medium", "sweet", "hot", "zesty"};// the number of salsas
-    float sales[salsas];// sales for each salsa
-    float prof;//the profit for each salsa a total of 5
-    int low, high;//the lowest and highest profit
+    string sales[salsas];// sales for each salsa
+    float prof[salsas];//the profit for each salsa a total of 5
+    char low, high;//the lowest and highest profit
     //Declare Variable Data Types and Constants
-     low=0;//lowest sale
-     high=0;//highest sells
+     low;//lowest sale
+     high;//highest sells
 
     //Process or map Inputs to Outputs
     for (int i = 0; i < salsas; i++) {
         cout<<"Enter the sales of "<<name[i]<<" salsa:$"<<endl;
-        cin>>sales[i];
+        cin>>name[i];
     }
-    cout<< "Type     Sales"<<endl;
-    cout<< name[0]<< "     $"<< sales[0]<<endl;
-    cout<< name[1]<< "   $"<< sales[1]<<endl;
-    cout<< name[2]<< "    $"<< sales[2]<<endl;
-    cout<< name[3]<< "      $"<< sales[3]<<endl;
-    cout<< name[4]<< "    $"<< sales[4]<<endl;
-    
-    prof = ( sales[0] + sales[1] + sales[2] + sales[3] + sales[4]);
-   cout<<"Total Sales was $"<<prof<<endl;
-    
-   cout<<"medium was the lowest selling product."<<endl;
-   cout<<"hot was the highest selling product.";
+    for (int i=0; i< salsas; i++){
+        if (name[i] < name[low]){
+            low=i;
+        }
+        if (name[i] > name[high]){
+            high =i;
+        }
+    }
     
     
     //Exit stage right!

@@ -2,12 +2,13 @@
  * File:   
  * Author: Anayely De La Vega
  * Created on July 25, 20 11:40 AM
- * Purpose: Display the different salsas, the total sales, and both the lowest anf highest selling products. 
+ * Purpose: Display the different salsas, the total sales, and both the lowest and highest selling products. 
  */
 
 //System Libraries
 #include <iostream>
 #include <iomanip>
+#include <string>
 using namespace std;
 
 //User Libraries
@@ -22,21 +23,34 @@ using namespace std;
 //Execution Begins Here
 int main(int argc, char** argv) {
     //Set Random Number seed
-    int salsas = "mild", "medium", "sweet", "hot", "zest";//5 different salsas
-    int prof=[salsas];//the profit for each salsa
+    int salsas = 5;
+    string name[salsas]= {"mild", "medium", "sweet", "hot", "zesty"};// the number of salsas
+    float sales[salsas];// sales for each salsa
+    float prof;//the profit for each salsa a total of 5
     int low, high;//the lowest and highest profit
     //Declare Variable Data Types and Constants
-    //Input the different salsas and the profits
-    cout<<"Enter the sales of "<<salsas<<" salsa: $"<<endl;
-    for (i=0; i<salsas; i++){
-        
-    }
-    //Initialize Variables
-    
-    //Process or map Inputs to Outputs
-    
-    //Display Outputs
+     low=0;//lowest sale
+     high=0;//highest sells
 
+    //Process or map Inputs to Outputs
+    for (int i = 0; i < salsas; i++) {
+        cout<<"Enter the sales of "<<name[i]<<" salsa:$"<<endl;
+        cin>>sales[i];
+    }
+    cout<< "Type     Sales"<<endl;
+    cout<< name[0]<< "     $"<< sales[0]<<endl;
+    cout<< name[1]<< "   $"<< sales[1]<<endl;
+    cout<< name[2]<< "    $"<< sales[2]<<endl;
+    cout<< name[3]<< "      $"<< sales[3]<<endl;
+    cout<< name[4]<< "    $"<< sales[4]<<endl;
+    
+    prof = ( sales[0] + sales[1] + sales[2] + sales[3] + sales[4]);
+   cout<<"Total Sales was $"<<prof<<endl;
+    
+   cout<<"medium was the lowest selling product."<<endl;
+   cout<<"hot was the highest selling product.";
+    
+    
     //Exit stage right!
     return 0;
 }

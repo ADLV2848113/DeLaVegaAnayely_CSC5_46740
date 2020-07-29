@@ -3,7 +3,7 @@
     <type>org.netbeans.modules.cnd.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>Gaddis_9thEdition_Chap8_Prob6_binarSearch</name>
+            <name>Gaddis_9thEdition_Chap8_prob6_BinarSearch</name>
             <c-extensions/>
             <cpp-extensions>cpp</cpp-extensions>
             <header-extensions/>
